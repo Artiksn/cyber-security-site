@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КиберЩит — советы по кибербезопасности</title>
+  <meta name="description" content="Практические советы по кибербезопасности: надёжные пароли, двухфакторная аутентификация, защита от фишинга, резервные копии и цифровая гигиена.">
+  <meta name="theme-color" content="#060a13">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#hero">
+        <span class="logo__icon">🛡️</span>
+        <span>Кибер<span class="logo__accent">Щит</span></span>
+      </a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#tips">Советы</a>
+        <a href="#phishing">Фишинг</a>
+        <a href="#checklist">Чек-лист</a>
+        <a href="#generator">Генератор</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <p class="hero__badge"><span class="hero__badge-dot"></span>// защити себя в сети</p>
+        <h1 class="hero__title">Твоя цифровая
+          <span class="hero__typed"><span id="typed"></span><span class="cursor">▌</span></span>
+        </h1>
+        <p class="hero__subtitle">Простые привычки, которые спасают пароли, деньги и нервы. Никакой магии — только то, что реально работает и занимает 5 минут в неделю.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#tips">Начать с советов →</a>
+          <a class="btn btn--ghost" href="#checklist">Пройти чек-лист</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__value">81%</span>
+            <span class="stat__label">взломов случаются из-за слабых паролей</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">99%</span>
+            <span class="stat__label">автоматических атак блокирует 2FA</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">3–2–1</span>
+            <span class="stat__label">золотое правило резервных копий</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS -->
+    <section class="section" id="tips">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__kicker">// базовый уровень</p>
+          <h2 class="section__title">9 привычек цифровой безопасности</h2>
+          <p class="section__lead">Злоумышленники охотятся на лёгкие цели. Выполни хотя бы половину пунктов — и ты перестанешь быть «лёгкой».</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon">🔑</div>
+            <h3 class="card__title">Длинные пароли-фразы</h3>
+            <p class="card__text">Вместо <code>qwerty123</code> — фраза из 4–5 случайных слов или строка 16+ символов из менеджера паролей. Длина важнее сложности: <code>КоньКорректныйБатареяСкоба</code> взламывается веками, а <code>P@ssw0rd!</code> — секундами.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> включи генератор в менеджере паролей, длину поставь 16–24 символа.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">📲</div>
+            <h3 class="card__title">Двухфакторная аутентификация</h3>
+            <p class="card__text">Пароль можно украсть, а второй фактор — нет. Включи 2FA везде, где есть: почта, банк, соцсети, мессенджеры. Приложение-аутентификатор надёжнее SMS.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> начни с почты — это ключ ко всем остальным аккаунтам.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🔄</div>
+            <h3 class="card__title">Обновляй всё и сразу</h3>
+            <p class="card__text">Каждое обновление закрывает дыры, которые хакеры уже используют. Включи автообновление операционной системы, браузера, телефона и всех программ.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> проверь настройки Windows Update и магазинов приложений.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🎣</div>
+            <h3 class="card__title">Защита от фишинга</h3>
+            <p class="card__text">Не переходи по ссылкам из неожиданных писем и SMS. Наведи курсор на ссылку и посмотри настоящий адрес; на телефоне — зажми ссылку и прочитай превью.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> полный разбор признаков — в секции «Фишинг» ниже.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">💾</div>
+            <h3 class="card__title">Резервные копии</h3>
+            <p class="card__text">Бэкап — единственное лекарство от вирусов-шифровальщиков. Правило 3–2–1: три копии, на двух разных носителях, одна — вне дома.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> автоматизируй: облако + внешний диск с еженедельным бэкапом.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">📡</div>
+            <h3 class="card__title">Осторожно с Wi-Fi</h3>
+            <p class="card__text">В кафе, аэропортах и отелях трафик могут перехватывать. Не заходи в банк и почту в открытых сетях без VPN, отключи авто-подключение к ним.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> нет VPN — раздай интернет с телефона.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🤫</div>
+            <h3 class="card__title">Меньше цифрового следа</h3>
+            <p class="card__text">Чем меньше о тебе известно, тем сложнее подобрать «секретный вопрос» или обмануть близких от твоего имени. Закрой профили, убери телефон и дату рождения из открытого доступа.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> проверь себя: загугли своё имя в режиме инкогнито.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🖥️</div>
+            <h3 class="card__title">Блокировка и шифрование</h3>
+            <p class="card__text">Украденный ноутбук страшен не железом, а данными. Ставь PIN или пароль на все устройства и включай шифрование диска: BitLocker (Windows), FileVault (macOS).</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> автоблокировку экрана поставь на 1–2 минуты.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">🧹</div>
+            <h3 class="card__title">Цифровая гигиена</h3>
+            <p class="card__text">Раз в полгода: удаляй неиспользуемые аккаунты, отзывай лишние разрешения у приложений, проверяй почту на <code>haveibeenpwned.com</code> — не попала ли она в утечки.</p>
+            <p class="card__tip"><span class="card__tip-label">Как сделать:</span> поставь напоминание в календарь — 15 минут дважды в год.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHISHING -->
+    <section class="section section--alt" id="phishing">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__kicker">// социальная инженерия</p>
+          <h2 class="section__title">6 признаков фишингового письма</h2>
+          <p class="section__lead">Фишинг — причина большинства утечек. Письмо, сообщение или звонок, который давит на эмоции и торопит, — почти всегда ловушка.</p>
+        </div>
+        <div class="flags">
+          <div class="flag reveal">
+            <span class="flag__icon">⏰</span>
+            <div>
+              <p class="flag__title">Срочность и угрозы</p>
+              <p class="flag__text">«Аккаунт заблокируют через 24 часа», «немедленно подтвердите данные». Давление временем — главный инструмент мошенника.</p>
+            </div>
+          </div>
+          <div class="flag reveal">
+            <span class="flag__icon">📎</span>
+            <div>
+              <p class="flag__title">Неожиданное вложение</p>
+              <p class="flag__text">Счёт, «фото», «договор» от незнакомца. Файлы .exe, .scr и макросы в .docm — классические носители вирусов.</p>
+            </div>
+          </div>
+          <div class="flag reveal">
+            <span class="flag__icon">🔗</span>
+            <div>
+              <p class="flag__title">Поддельный домен</p>
+              <p class="flag__text">Наведи курсор на ссылку: <code>g00gle.com</code>, <code>paypal.security-check.ru</code> — домен подделан. Проверяй адрес до клика.</p>
+            </div>
+          </div>
+          <div class="flag reveal">
+            <span class="flag__icon">✏️</span>
+            <div>
+              <p class="flag__title">Ошибки и странный язык</p>
+              <p class="flag__text">Машинный перевод, кривая вёрстка, обращение «уважаемый клиент» вместо имени. Серьёзные компании так не пишут.</p>
+            </div>
+          </div>
+          <div class="flag reveal">
+            <span class="flag__icon">🔐</span>
+            <div>
+              <p class="flag__title">Просят пароль или код</p>
+              <p class="flag__text">Ни банк, ни поддержка, ни госсервисы никогда не попросят пароль, PIN или код из SMS. Это знает только мошенник.</p>
+            </div>
+          </div>
+          <div class="flag reveal">
+            <span class="flag__icon">💰</span>
+            <div>
+              <p class="flag__title">Слишком сладко</p>
+              <p class="flag__text">Выигрыш в лотерее без участия, «лёгкий заработок», возврат налогов. Бесплатный сыр бывает только в мышеловке.</p>
+            </div>
+          </div>
+        </div>
+        <div class="callout reveal">
+          <span class="callout__icon">🛑</span>
+          <p><strong>Сомневаешься — не кликай.</strong> Открой сайт вручную через адресную строку, а подозрительное письмо перешли в официальную поддержку. Лучше потерять минуту, чем аккаунт.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="section" id="checklist">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__kicker">// самоаудит</p>
+          <h2 class="section__title">Чек-лист: насколько ты защищён?</h2>
+          <p class="section__lead">Отметь то, что уже сделано. Прогресс сохраняется в твоём браузере — возвращайся и закрывай пункты по одному.</p>
+        </div>
+        <ul class="checklist" id="checklist-list">
+          <li class="reveal"><label><input type="checkbox" data-key="manager"><span class="checkbox"></span><span class="checklist__text">Установил(а) менеджер паролей и перенёс(ла) в него главные аккаунты</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="unique"><span class="checkbox"></span><span class="checklist__text">Почта, банк и соцсети — с уникальными паролями, которые нигде не повторяются</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="2fa-mail"><span class="checkbox"></span><span class="checklist__text">Двухфакторная аутентификация включена на почте</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="2fa-other"><span class="checkbox"></span><span class="checklist__text">2FA включена в банке, мессенджерах и соцсетях (приложение-аутентификатор, не SMS)</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="updates"><span class="checkbox"></span><span class="checklist__text">Автообновления включены на компьютере и телефоне</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="backup"><span class="checkbox"></span><span class="checklist__text">Сделал(а) резервные копии важных файлов по правилу 3–2–1</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="lock"><span class="checkbox"></span><span class="checklist__text">На всех устройствах стоит блокировка экрана: PIN, пароль или биометрия</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="encrypt"><span class="checkbox"></span><span class="checklist__text">Включено шифрование диска (BitLocker / FileVault / шифрование Android)</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="links"><span class="checkbox"></span><span class="checklist__text">Проверяю адрес отправителя и ссылки, прежде чем кликнуть</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="vpn"><span class="checkbox"></span><span class="checklist__text">Не ввожу пароли в публичном Wi-Fi или использую VPN</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="hibp"><span class="checkbox"></span><span class="checklist__text">Проверил(а) свою почту на haveibeenpwned.com</span></label></li>
+          <li class="reveal"><label><input type="checkbox" data-key="cleanup"><span class="checkbox"></span><span class="checklist__text">Удалил(а) неиспользуемые аккаунты и старые приложения</span></label></li>
+        </ul>
+        <div class="checklist-progress reveal">
+          <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
+          <span class="checklist-count" id="progressText">0 из 12</span>
+          <button class="btn btn--ghost btn--small" id="resetChecklist">Сбросить</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENERATOR -->
+    <section class="section section--alt" id="generator">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <p class="section__kicker">// практика</p>
+          <h2 class="section__title">Генератор надёжных паролей</h2>
+          <p class="section__lead">Пароль создаётся прямо в браузере с помощью криптографического генератора случайных чисел и никуда не отправляется.</p>
+        </div>
+        <div class="generator reveal">
+          <div class="generator__output">
+            <input type="text" id="password" readonly placeholder="Нажми «Сгенерировать»" aria-label="Сгенерированный пароль">
+            <button class="btn btn--small" id="copyBtn">Скопировать</button>
+          </div>
+          <div class="generator__row">
+            <label class="generator__length" for="length">Длина: <strong id="lengthValue">20</strong></label>
+            <input type="range" id="length" min="8" max="64" value="20">
+          </div>
+          <div class="generator__options">
+            <label><input type="checkbox" id="optUpper" checked> Заглавные A–Z</label>
+            <label><input type="checkbox" id="optLower" checked> Строчные a–z</label>
+            <label><input type="checkbox" id="optDigits" checked> Цифры 0–9</label>
+            <label><input type="checkbox" id="optSymbols" checked> Символы !@#$</label>
+          </div>
+          <div class="strength">
+            <div class="strength__bar"><div id="strengthFill"></div></div>
+            <span id="strengthLabel">—</span>
+          </div>
+          <button class="btn btn--primary btn--wide" id="generateBtn">⚡ Сгенерировать</button>
+          <p class="generator__note">Не используй один пароль на нескольких сайтах. Для каждого сервиса — свой, а хранить их удобно в менеджере.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__kicker">// коротко о главном</p>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <div class="faq__item reveal">
+            <button class="faq__question">Я перешёл по подозрительной ссылке. Что делать?<span class="faq__icon">+</span></button>
+            <div class="faq__answer"><p>Не паникуй. Если ты ничего не вводил — скорее всего, всё в порядке: закрой вкладку и не возвращайся. Если вводил пароль или данные карты — немедленно смени пароль (с другого устройства), включи 2FA, заблокируй карту через приложение банка и проверь список активных сессий в настройках аккаунта: выйди со всех чужих устройств. Прогони антивирус и понаблюдай за подозрительной активностью пару недель.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">Как узнать, утекли ли мои данные?<span class="faq__icon">+</span></button>
+            <div class="faq__answer"><p>Зайди на haveibeenpwned.com и введи свою почту — сервис покажет, в каких известных утечках она встречалась. Подпишись на уведомления: придёт письмо, если почта засветится снова. Утечка — сигнал сменить пароль этого сайта и всех, где он повторялся.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">Нужен ли платный антивирус?<span class="faq__icon">+</span></button>
+            <div class="faq__answer"><p>Встроенного защитника (Windows Defender) достаточно для большинства пользователей — при условии, что ты не выключаешь его и не запускаешь случайные файлы из интернета. Платный антивирус не заменяет осторожность: главный фактор безопасности — человек перед экраном.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">Какой менеджер паролей выбрать?<span class="faq__icon">+</span></button>
+            <div class="faq__answer"><p>Bitwarden — бесплатный, с открытым кодом, работает везде: телефон, браузер, компьютер. Также хороши 1Password и KeePassXC. Запомни только один мастер-пароль — длинную фразу — и включи 2FA для самого менеджера.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">Безопасно ли хранить пароли в браузере?<span class="faq__icon">+</span></button>
+            <div class="faq__answer"><p>Лучше, чем один и тот же пароль везде, но хуже, чем отдельный менеджер: пароли браузера привязаны к профилю, их проще вытащить с заражённого устройства, а доступ получает любой, кто откроет твой профиль. Менеджер даёт шифрование, синхронизацию между устройствами и предупреждения об утечках.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>🛡️ <strong>КиберЩит</strong> — советы, а не панацея. Безопасность — это процесс, а не кнопка.</p>
+      <p class="footer__muted">Сайт работает без сервера: чистый HTML + CSS + JS. Разверни его бесплатно на GitHub Pages. © <span id="year">2026</span></p>
+      <p class="footer__author">Сделал <span class="footer__author-name">Живолевский Артемий Викторович</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
